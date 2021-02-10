@@ -1,0 +1,20 @@
+<div class="message">
+ <div class = "content-main">
+  <div class="content1">
+    <div class="m1">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= message.user.name %>
+    </div>
+    <div class="t1">
+      <!-- 投稿した時刻を出力する -->
+      <%= l message.created_at %>
+    </div>
+  </div>
+  <div class="content2">
+    <div class="aisatu">
+      <!-- 投稿したメッセージ内容を記述する -->
+      <%= message.content %>
+    </div>
+  </div>
+ </div>
+</div>
