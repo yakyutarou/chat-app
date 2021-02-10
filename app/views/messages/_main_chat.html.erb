@@ -27,12 +27,15 @@
     </div>
     
     <div class = "chat-sita">
-      <div class = "form">
-        <input type="text" class="inputtext" placeholder="type a message">
-        <label class="form-image">
-          <span class="image-file">画像</span>
-        <input type="file" class="hidden">
-        </label>
+      <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+        <div class = "form">
+        <%= f.text_field :content, class: 'inputtext', placeholder: 'type a message' %>
+
+          <label class="form-image">
+            <span class="image-file">画像</span>
+            <%= f.file_field :image, class: 'hidden' %>
+          </label>
        </div>
-        <input type="submit" class="submitbotan" value="送信">
+      <%= f.submit '送信', class: 'submitbotan' %>
+      <% end %>
     </div>
